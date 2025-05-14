@@ -383,8 +383,16 @@ Secara keseluruhan, **Random Forest** menjadi model yang paling unggul dalam hal
 
 ### **Evaluasi Terhadap Business Understanding**
 
+* Model yang dibangun **berhasil memprediksi apakah seseorang menderita kanker** menggunakan data medis dasar seperti usia, jenis kelamin, riwayat merokok, dan hasil pemeriksaan medis seperti BMI, aktivitas fisik, dan konsumsi alkohol. Penggunaan algoritma machine learning seperti Random Forest, Decision Tree, Logistic Regression, dan K-Nearest Neighbors memungkinkan model untuk mengklasifikasikan status kanker (positif/negatif) tanpa memerlukan tes laboratorium yang mahal. Ini memberikan solusi yang lebih cepat, murah, dan lebih mudah diakses dalam mendeteksi kanker dibandingkan dengan metode tes laboratorium tradisional, sekaligus menjawab tantangan dalam prediksi kanker hanya menggunakan data medis dasar.
+
+* Berdasarkan metode **Exploratory Data Analysis (EDA)**, ditemukan bahwa **CancerHistory (Riwayat Kanker)** adalah fitur yang paling berpengaruh dalam memprediksi status kanker. Korelasi yang cukup kuat antara riwayat kanker dan status diagnosis menunjukkan bahwa fitur ini menjadi indikator utama dalam mendeteksi risiko kanker. Selain itu, fitur-fitur lain seperti usia, jenis kelamin, dan riwayat merokok juga berkontribusi, meskipun dengan pengaruh yang lebih rendah. Hasil ini menjawab pertanyaan tentang fitur mana yang paling berpengaruh terhadap diagnosis kanker.
+
+* Dalam hal pengukuran dan peningkatan kinerja model, **hyperparameter tuning** dilakukan untuk mengoptimalkan parameter model. Model dievaluasi menggunakan metrik klasifikasi yang relevan, seperti akurasi, precision, recall, dan F1-score, untuk memastikan bahwa model memiliki performa yang baik dalam memprediksi kanker dan dapat digunakan secara efektif dalam sistem pendukung keputusan medis. Temuan ini menunjukkan bahwa model tidak hanya akurat, tetapi juga memiliki kemampuan untuk memberikan informasi yang lebih mendalam dalam mendeteksi kanker dengan data medis yang tersedia.
+
+Dengan pendekatan ini, model memberikan **solusi yang lebih efisien dan dapat diakses** untuk mendeteksi kanker menggunakan data medis dasar, yang akan membantu dalam pengambilan keputusan medis secara lebih cepat dan biaya yang lebih rendah.
 
 ## Kesimpulan
+Proyek ini berhasil membangun model prediksi kanker menggunakan data medis dasar seperti usia, jenis kelamin, riwayat merokok, BMI, aktivitas fisik, konsumsi alkohol, dan riwayat kanker. Melalui eksplorasi data, ditemukan bahwa fitur **CancerHistory** memiliki pengaruh terbesar terhadap diagnosis kanker, diikuti oleh **Usia** dan **Jenis Kelamin**. Model yang dibangun menggunakan algoritma seperti Random Forest, Decision Tree, Logistic Regression, dan K-Nearest Neighbors menunjukkan performa yang baik, dengan akurasi yang memadai setelah dilakukan **hyperparameter tuning**. Model ini memberikan solusi yang cepat, murah, dan mudah diakses untuk mendeteksi kanker, serta dapat digunakan sebagai alat bantu dalam proses diagnosis medis, meningkatkan efisiensi dan kecepatan identifikasi risiko kanker pada pasien.
 
 ## Referensi:
 [1] World Health Organization, "Cancer Fact Sheet," WHO, [Online]. Available: https://www.who.int/news-room/fact-sheets/detail/cancer.
