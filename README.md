@@ -2,6 +2,7 @@
 
 ## Domain Proyek
 ![Cancer Image](image/cancer.jpg)
+
 Kanker merupakan salah satu penyebab utama kematian di dunia. Menurut laporan dari World Health Organization (WHO), terdapat sekitar 10 juta kematian akibat kanker pada tahun 2020 [1]. Deteksi dini kanker memiliki dampak yang signifikan terhadap keberhasilan pengobatan dan keselamatan pasien. Oleh karena itu, penggunaan teknologi modern seperti machine learning (ML) dalam mendeteksi dan memprediksi kanker menjadi sangat penting.
 
 Beberapa penelitian menunjukkan bahwa algoritma machine learning mampu mengenali pola-pola kompleks dalam data medis yang tidak mudah dikenali oleh manusia. Kourou et al. menyatakan bahwa metode pembelajaran mesin seperti logistic regression, decision tree, random forest, dan support vector machine telah digunakan secara luas dalam prognosis dan prediksi kanker dengan hasil yang menjanjikan [2]. Selain itu, penggunaan machine learning terbukti dapat meningkatkan efisiensi serta akurasi sistem pendukung keputusan medis [3].
@@ -60,6 +61,7 @@ Dataset yang digunakan dalam proyek ini adalah Cancer Prediction Dataset yang te
 | 6 | AlcoholIntake     | float64  |
 | 7 | CancerHistory     | int64    |
 | 8 | Diagnosis         | int64    |
+
 Dataset ini terdiri dari beberapa fitur penting yang mewakili karakteristik pasien:
 - Age: Usia pasien dalam rentang 20 hingga 80 tahun.
 - Gender: Jenis kelamin pasien, di mana 0 menunjukkan laki-laki dan 1 menunjukkan perempuan.
@@ -185,6 +187,7 @@ Berikut adalah penjelasan dari model yang digunakan:
 
 ### 1. **Random Forest (RF)**
 ![Random Forest](image/randomforest.png)
+
 **Random Forest** adalah algoritma ensemble yang membangun banyak pohon keputusan dan menggabungkan prediksinya untuk meningkatkan akurasi serta mengurangi overfitting. Sebagaimana dijelaskan oleh Scikit-learn, Random Forest menggunakan beberapa pohon keputusan yang dilatih pada berbagai subset data, dan hasil prediksi akhir diperoleh melalui mayoritas suara dari seluruh pohon yang ada [6].
 
 Model ini dilatih menggunakan data hasil praproses X_train_prepared dan target y_train_resampled, yang telah di-resample untuk mengatasi ketidakseimbangan kelas.
@@ -218,6 +221,7 @@ Selanjutnya, evaluasi dilakukan pada data X_test_prepared dengan berbagai metrik
 
 ### 2. **Decision Tree (DT)**
 ![Decision Tree](image/dt.png)
+
 **Decision Tree** adalah algoritma pembelajaran yang membangun model berbentuk pohon keputusan, yang dapat digunakan untuk masalah klasifikasi maupun regresi. Setiap node pada pohon keputusan mewakili suatu fitur yang dipilih, dan cabang mewakili keputusan yang diambil berdasarkan nilai dari fitur tersebut.
 
 **Tahapan:**
@@ -241,6 +245,7 @@ dt = DecisionTreeClassifier().fit(X_train_prepared, y_train_resampled)
 | Dapat menangani fitur numerik dan kategorikal. | Cenderung menghasilkan model yang kurang robust pada dataset yang sangat besar atau kompleks. |
 
 ### 3. **Logistic Regression (LR)**
+
 ![Logistic Regression](image/lr.png)
 **Logistic Regression** merupakan salah satu metode statistik yang sering digunakan dalam tugas klasifikasi biner. Model ini memperkirakan probabilitas sebuah data termasuk dalam kelas tertentu dengan memanfaatkan fungsi logistik (sigmoid).
 
@@ -266,6 +271,7 @@ Logistic Regression bekerja dengan pertama-tama menghitung gabungan linier dari 
 
 ### 4. **K-Nearest Neighbors (KNN)**
 ![K-Nearest Neighbors](image/knn.png)
+
 **K-Nearest Neighbors (KNN)** merupakan algoritma klasifikasi non-parametrik yang bekerja dengan cara menentukan label suatu data uji berdasarkan mayoritas label dari sejumlah k data latih terdekat. Penentuan kedekatan umumnya dilakukan dengan menghitung jarak menggunakan metrik seperti Euclidean atau Manhattan.
 
 Dalam proyek ini, model KNN dilatih pada data yang telah diproses menggunakan kode berikut:
@@ -304,6 +310,7 @@ Pada tahap ini, metrik evaluasi yang digunakan untuk mengukur performa model mel
 Dengan metrik ini, kita dapat mengevaluasi seberapa efektif model dalam mengidentifikasi pasien yang benar-benar memiliki kanker berdasarkan fitur-fitur medis dasar seperti usia, jenis kelamin, kebiasaan merokok, dan hasil pemeriksaan laboratorium. Selain itu, metrik ini juga membantu dalam mengukur dan meningkatkan kinerja model agar dapat digunakan secara efektif sebagai bagian dari sistem pendukung keputusan medis.
 
 **1. Akurasi**
+
 Akurasi adalah metrik yang mengukur seberapa banyak prediksi yang benar dibandingkan dengan total prediksi yang dilakukan oleh model. Dalam konteks prediksi kanker, akurasi mengukur sejauh mana model dapat memprediksi apakah pasien benar-benar mengidap kanker atau tidak. Rumusnya:
 
 
@@ -314,6 +321,7 @@ $$
 Dalam konteks evaluasi model klasifikasi, **True Positives (TP)** merujuk pada kasus positif yang benar, yaitu individu yang benar-benar mengidap kanker dan diprediksi sebagai positif oleh model. **True Negatives (TN)** adalah kasus negatif yang benar, yaitu individu yang sehat dan diprediksi negatif oleh model. Sebaliknya, **False Positives (FP)** terjadi ketika individu yang sehat salah diprediksi mengidap kanker, sementara **False Negatives (FN)** adalah individu yang mengidap kanker tetapi salah diprediksi sehat oleh model. Metrik evaluasi seperti akurasi, precision, recall, dan F1-score dihitung berdasarkan jumlah TP, TN, FP, dan FN ini.
 
 **2. Precision**
+
 Precision mengukur seberapa banyak prediksi positif yang benar dibandingkan dengan seluruh prediksi positif yang dibuat oleh model. Dalam hal ini, precision mengukur seberapa banyak prediksi pasien mengidap kanker yang benar-benar mengidap kanker. Rumusnya:
 
 $$
@@ -323,6 +331,7 @@ $$
 Precision yang tinggi berarti model sangat tepat dalam memprediksi pasien yang benar-benar mengidap kanker, dengan sedikit kesalahan dalam mengklasifikasikan pasien yang sehat sebagai pasien kanker.
 
 **3. Recall**
+
 Recall mengukur seberapa banyak kasus positif yang sebenarnya dapat dideteksi oleh model. Dalam konteks prediksi kanker, recall mengukur kemampuan model untuk mengidentifikasi semua pasien yang benar-benar mengidap kanker. Rumusnya:
 
 $$
@@ -332,6 +341,7 @@ $$
 Recall yang tinggi berarti model berhasil mendeteksi sebagian besar pasien yang benar-benar mengidap kanker. Ini penting dalam konteks medis, karena lebih baik untuk mendeteksi semua kasus kanker meskipun ada beberapa kesalahan (false positives).
 
 **4. F1-Score**
+
 F1-Score adalah rata-rata harmonis antara Precision dan Recall, memberikan keseimbangan antara keduanya. F1-Score sangat berguna ketika kita ingin memastikan bahwa model tidak hanya akurat dalam memprediksi positif, tetapi juga mampu menangkap sebagian besar kasus positif. Rumusnya:
 
 $$
@@ -378,11 +388,19 @@ Secara keseluruhan, **Random Forest** menjadi model yang paling unggul dalam hal
 
 ## Referensi:
 [1] World Health Organization, "Cancer Fact Sheet," WHO, [Online]. Available: https://www.who.int/news-room/fact-sheets/detail/cancer.
+
 [2] A. A. P. Wijaya, B. S. Putra, dan R. D. Kurniawan, "Penerapan algoritma machine learning untuk deteksi kanker payudara menggunakan dataset medis Indonesia," Jurnal Teknologi dan Sistem Komputer, vol. 8, no. 4, pp. 225-230, 2021.
+
 [3] M. H. L. Sinaga dan R. P. S. Tarigan, "Penggunaan machine learning dalam prediksi kanker di rumah sakit Indonesia: Sebuah tinjauan," Jurnal Ilmu Komputer dan Teknologi Informasi, vol. 5, no. 1, pp. 58-63, 2022.
+
 [4] D. A. A. Kurniawan, "Kekurangan tenaga medis spesialis di daerah terpencil dan pengembangan sistem pendukung keputusan berbasis teknologi," Jurnal Kesehatan Indonesia, vol. 9, no. 2, pp. 102-107, 2023.
+
 [5] S. P. Rahardjo dan T. T. Wulandari, "Optimalisasi sistem diagnosa medis berbasis machine learning di Indonesia untuk meningkatkan akurasi diagnosis kanker," Jurnal Informatika, vol. 17, no. 3, pp. 183-190, 2024.
+
 [6] Scikit-learn, “1.11. Ensemble methods — scikit-learn documentation,” scikit-learn.org, [Online]. Available: https://scikit-learn.org/stable/modules/ensemble.html#random-forests.
+
 [7] Scikit-learn, "Decision Tree Classifier," Scikit-learn Documentation, [Online]. Available: https://scikit-learn.org/stable/modules/tree.html.
-[8] Scikit-learn, “sklearn.linear_model.LogisticRegression,” scikit-learn: Machine Learning in Python. [Online]. Available: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+
+[8] Scikit-learn, “sklearn.linear_model.LogisticRegression,” scikit-learn: Machine Learning in Python. [Online]. Available: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html.
+
 [9] “sklearn.neighbors.KNeighborsClassifier,” scikit-learn, 2024. [Online]. Available: https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
