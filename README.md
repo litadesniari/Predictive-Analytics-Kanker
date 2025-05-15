@@ -408,3 +408,11 @@ Proyek ini berhasil membangun model prediksi kanker menggunakan data medis dasar
 [4] D. Juliani, “Implementasi machine learning untuk klasifikasi penyakit kanker paru menggunakan metode Naïve Bayes dengan tambahan fitur chatbot,” Jurnal Ilmu Informasi, vol. 2, no. 1, pp. 56–63, 2024. [Online]. Available: https://jurnaliptek.iti.ac.id/index.php/jii/article/view/351
 
 [5] R. R. Adiningrum and C. Priyanto, “Prediksi jenis kanker payudara menggunakan metode Support Vector Machine,” JATISI (Jurnal Teknik Informatika dan Sistem Informasi), vol. 11, no. 1, pp. 34–40, 2024. [Online]. Available: https://jurnal.mdp.ac.id/index.php/jatisi/article/view/10079
+
+[6] Scikit-learn, “1.11. Ensemble methods — scikit-learn documentation,” scikit-learn.org, [Online]. Available: https://scikit-learn.org/stable/modules/ensemble.html#random-forests
+
+[7] Scikit-learn, "Decision Tree Classifier," Scikit-learn Documentation, [Online]. Available: https://scikit-learn.org/stable/modules/tree.html
+
+[8] Scikit-learn, “sklearn.linear_model.LogisticRegression,” scikit-learn: Machine Learning in Python. [Online]. Available: https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
+
+[9] “sklearn.neighbors.KNeighborsClassifier,” scikit-learn, 2024. [Online]. Available: https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html
