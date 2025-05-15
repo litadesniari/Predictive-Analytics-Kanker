@@ -249,6 +249,7 @@ dt = DecisionTreeClassifier().fit(X_train_prepared, y_train_resampled)
 ### 3. **Logistic Regression (LR)**
 
 ![Logistic Regression](image/lr.png)
+
 **Logistic Regression** merupakan salah satu metode statistik yang sering digunakan dalam tugas klasifikasi biner. Model ini memperkirakan probabilitas sebuah data termasuk dalam kelas tertentu dengan memanfaatkan fungsi logistik (sigmoid).
 
 Kode pelatihan model yang digunakan adalah sebagai berikut:
